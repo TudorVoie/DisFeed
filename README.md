@@ -2,6 +2,7 @@
 Send RSS feeds to Discord using webhooks and cronjobs!
 
 # How to use
+Make sure you have Python, requests and feedparser installed!
 Edit your crontab and for every feed, after the time, add: 
 <br>
 ```/usr/bin/python3 (path for feed.py) (rss link) (webhook link) (path for file name for the time of last article to be stored)```
