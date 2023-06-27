@@ -12,7 +12,8 @@ if os.path.isfile(str(sys.argv[3])) == False:
             "text": d.entries[0].published
         },
         "description" : d.entries[0].description,
-        "title" : d.entries[0].title
+        "title" : d.entries[0].title,
+        "url" : d.entries[0].link
     }
     ]
     result = requests.post(str(sys.argv[2]), json = data)
@@ -36,7 +37,8 @@ else:
                     "text": d.entries[0].published
                 },
                 "description" : d.entries[i].description,
-                "title" : d.entries[i].title
+                "title" : d.entries[i].title,
+                "url" : d.entries[i].link
             }
             ]
             result = requests.post(str(sys.argv[2]), json = data)
