@@ -8,9 +8,9 @@ After=network.target
 User='$2'
 Group='$3'
 Type=simple
-ExecStart=/usr/bin/python3 "'$4'" "'$5'" "'$6'"
+ExecStart=/usr/bin/python3 "'$4'" "'$5'" "'$6'" "'$7'"
 Restart=always
-RestartSec='$7'
+RestartSec='$8'
 
 [Install]
 WantedBy=multi-user.target'
