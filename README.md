@@ -16,7 +16,7 @@ Edit your crontab and for every feed, after the time, add:
 You can use [Crontab Guru](https://crontab.guru) for cronjob stuff.
 <br>
 <br>
-Service:
+Service (manual):
 <br>
 Edit ```/etc/systemd/system/Disfeed.service```
 <br>
@@ -39,7 +39,11 @@ RestartSec=time between checks
 [Install]
 WantedBy=multi-user.target
 ```
-
+<br>
+Service (semi-auto):
+Use service-creator.sh after the following example, it will output the contents of a .service file which you will then create it yourself in /etc/systemd/system/
+<br>
+```sh service-creator.sh service_name username group path_to_disfeed.py rss_link webhook_link path_for_the_temp_file check interval```
 
 # Example line
 ```*/15 * * * * /usr/bin/python3 /home/ubuntu/feed.py https://example.com/index.xml https://discordapp.com/1235134123/asdadguygHAYUAHSD/ examplecom.txt```
