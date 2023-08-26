@@ -42,7 +42,7 @@ WantedBy=multi-user.target
 <br>
 Service (semi-auto):
 Use service-creator.sh after the following example, it will output the contents of a .service file which you will then create it yourself in /etc/systemd/system/
-<br>
+
 ```sh service-creator.sh service_name username group path_to_disfeed.py rss_link webhook_link path_for_the_temp_file check interval```
 
 # Example line
